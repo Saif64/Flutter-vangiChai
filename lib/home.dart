@@ -102,16 +102,30 @@ class _HomePageState extends State<HomePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        inputField(),
-        tableButtons(),
-        noteText('500: $t500'),
-        noteText('100: $t100'),
-        noteText('50: $t50'),
-        noteText('20: $t20'),
-        noteText('10: $t10'),
-        noteText('5: $t5'),
-        noteText('2: $t2'),
-        noteText('1: $t1'),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                noteText('500: $t500'),
+                noteText('100: $t100'),
+                noteText('50: $t50'),
+                noteText('20: $t20'),
+                noteText('10: $t10'),
+                noteText('5: $t5'),
+                noteText('2: $t2'),
+                noteText('1: $t1'),
+              ],
+            ),
+          ],
+        ),
+        Column(
+          children: [
+            inputField(),
+            tableButtons(),
+          ],
+        )
       ],
     );
   }
